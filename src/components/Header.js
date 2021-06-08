@@ -1,14 +1,22 @@
 import React from 'react';
+import Nav from 'react-bootstrap/Nav'
 
 
 class Header extends React.Component {
     render() {
         return (
-            <div>
-                <h1>
-                    Horned Beasts
-      </h1>
-            </div>
+            <Nav
+            activeKey="/home"
+            onSelect={(selectedKey) => alert(`selected ${selectedKey}`)}
+          >
+          
+           
+            <Nav.Item>
+              <Nav.Link eventKey="disabled" disabled>
+           <h3>Horned Beasts 🦄</h3> 
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
         )
     }
 }
