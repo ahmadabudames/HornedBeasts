@@ -1,21 +1,40 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import hornedbeastsData from './data.json'
+
 
 
 class Main extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0
+    }
+  }
+
+  giveInc = () => {
+    this.setState({
+      count: this.state.count
+    })
+  }
+
   render() {
 
     return (
       <div>
         {
-          hornedbeastsData.map((beasts) => {
+          this.props.hornedbeastsData.map((beasts) => {
             return (
-              <HornedBeasts
-                title={beasts.title}
-                img={beasts.image_url}
-                discription={beasts.description}
-              />
+              <div>
+
+                <HornedBeasts
+                  title={beasts.title}
+                  giveInc={this.giveInc}
+                  img={beasts.image_url}
+                  description={beasts.description}
+                  handleModel={this.props.handleModel}
+
+                />
+              </div>
             )
           })
         }
