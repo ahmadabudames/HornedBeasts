@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import hornedbeastsData from './components/data.json'
 import SelectModal from './components/SelectModal';
+import Forms from './components/Forms';
 
 class App extends React.Component {
   constructor(props) {
@@ -30,10 +31,12 @@ class App extends React.Component {
           hornedbeastsData={hornedbeastsData}
           handleModel={this.handleModel}
         />  
+           
         <SelectModal
         show={this.state.show}
         SelectModalProps={this.state.SelectModalProps}
         />
+     
         <Footer />
       </div>
     )

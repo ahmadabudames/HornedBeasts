@@ -1,4 +1,5 @@
 import React from 'react';
+import Forms from './Forms';
 import HornedBeasts from './HornedBeasts';
 
 
@@ -25,8 +26,11 @@ class Main extends React.Component {
           this.props.hornedbeastsData.map((beasts) => {
             return (
               <div>
-
+<div>
+<Forms/>
+  </div>
                 <HornedBeasts
+                
                   title={beasts.title}
                   giveInc={this.giveInc}
                   img={beasts.image_url}
